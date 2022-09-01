@@ -6,6 +6,10 @@ const routes = [
     path: '/home',
     component: () => import('@/pages/index.vue'),
   },
+  {
+    path: '/rank',
+    component: () => import('@/pages/rank/index.vue'),
+  },
 ]
 
 export const router = createRouter({

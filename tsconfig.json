@@ -12,6 +12,9 @@
     "allowJs": true,
     "outDir": "./node_modules/.cache",
     "esModuleInterop": true,
+    "isolatedModules": true,
+    "skipLibCheck": true,
+    "types": ["vite/client"],
     "lib": [
       "esnext",
       "dom"
@@ -28,10 +31,14 @@
     "src/**/*.d.ts",
     "src/**/*.tsx",
     "src/**/*.vue",
-    "components.d.ts",
+    "auto-imports.d.ts",
   ],
   "exclude": [
     "node_modules",
     "dist"
+  ],
+  "types": ["vue", "vue-router"],
+  "typeRoots": [
+    "./node_modules/@types",
   ]
 }

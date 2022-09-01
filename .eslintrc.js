@@ -1,18 +1,27 @@
 module.exports = {
   root: true,
   env: {
+    es2020: true,
     node: true,
     browser: true,
-    es6: true,
   },
   plugins: ['vue', 'prettier'],
-  extends: ['eslint:recommended', 'plugin:vue/vue3-recommended'],
+  extends: [
+    'plugin:vue/vue3-recommended',
+    'eslint:recommended',
+    '@vue/typescript/recommended',
+    'prettier',
+    './.eslintrc-auto-import.json',
+  ],
   rules: {
-    'vue/max-attributes-per-line': 'off',
     'vue/require-default-prop': 'off',
     'vue/no-v-html': 'off',
+    'prefer-rest-params': 'off',
+    'no-empty-function': 'off',
+    '@typescript-eslint/no-empty-function': ['error'],
     'no-console': 0,
     'no-debugger': 0,
+    '@typescript-eslint/no-explicit-any': ['off'],
     quotes: [1, 'single'], //引号类型 `` "" ''
     semi: [2, 'never'], // 语句强制分号结尾
     'vue/multi-word-component-names': 0,
@@ -29,11 +38,10 @@ module.exports = {
         endOfLine: 'auto',
       },
     ],
-    'vue/html-closing-bracket-newline': [
+    '@typescript-eslint/no-empty-interface': [
       'error',
       {
-        singleline: 'never',
-        multiline: 'always',
+        allowSingleExtends: false,
       },
     ],
   },
