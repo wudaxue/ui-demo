@@ -10,6 +10,10 @@ const routes = [
     path: '/rank',
     component: () => import('@/pages/rank/index.vue'),
   },
+  {
+    path: '/gradient',
+    component: () => import('@/pages/gradient/index.vue'),
+  },
 ]
 
 export const router = createRouter({
